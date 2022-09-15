@@ -216,16 +216,18 @@ export default class ShareButton<LinkOptions> extends Component<Props<LinkOption
         };
 
     return (
-      <button
+      <a
         {...rest}
         aria-label={rest['aria-label'] || networkName}
         className={newClassName}
         onClick={this.handleClick}
         ref={forwardedRef}
         style={newStyle}
+        rel="noopener noreferrer"
+        target="_blank"
       >
         {children}
-      </button>
+      </a>
     );
   }
 }
